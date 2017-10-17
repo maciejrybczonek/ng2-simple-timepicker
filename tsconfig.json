@@ -24,9 +24,10 @@
     ]
   },
   "files": [
-    "index.ts"
+    "ng2-simple-timepicker.ts"
   ],
   "angularCompilerOptions": {
-    "strictMetadataEmit": true
+    "strictMetadataEmit": true,
+    "skipTemplateCodegen": true
   }
 }

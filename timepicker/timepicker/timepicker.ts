@@ -3,11 +3,8 @@ import { Directive,ElementRef,Renderer,
           EventEmitter,Output,Input,OnChanges,ViewChild } from '@angular/core';
 
 declare var $: any;
-          
-/**
- * Acts as a private class
- */
-class TimepickerConfig{
+
+export class TimepickerConfig {
   //Override where the dropdown is appended.
   //Takes either a string to use as a selector, a function that gets passed the clicked input element as argument or a jquery object to use directly.
   appendTo : string = "body";
