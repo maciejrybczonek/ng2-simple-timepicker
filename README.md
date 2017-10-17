@@ -1,23 +1,17 @@
 # **Time picker for Angular2**
 
-Angular2 wrapper around jQuery time picker by
----------------------------------------------
-https://github.com/jonthornton/jquery-timepicker
+Angular2 wrapper around jQuery time picker by https://github.com/jonthornton/jquery-timepicker
+Forked from https://github.com/bharatraj88/angular2-timepicker
 
-
-
+Note that this is a very quick and dirty "hack" to get it running in Angular2
 
 **Requirements:**
 
-1. Angular2 version 2.1.1
-2. Typescript version>1.8
-3. jQuery version> 1.7
-
-Note: This component is compatible with beta version of angularjs2
-
+1. Angular2 version 4.2.4
+2. Typescript version 2.3.4
+3. jQuery version 3.2.1
 
 **Usage:**
-
 
       <input type="text" class="timepicker" 
       [options]="{disableTextInput: false,
@@ -28,24 +22,17 @@ Add TimePickerComponent into your component directives. Time picker is applied o
 
 You can use ngModel bidings and also listen to events in angular2 way. The model is updated with the value as per the format given in the options.
 
-**Example||**
+**Example**
 
          <input type="text" [ngModel]="time" (changeTime)="doSomething();"
       class="form-control timepicker" [ngClass]="custom-cls"
       [options]="{disableTextInput: false,'timeFormat':'HH:mm',showDuration:false}"/>
 
- 
-
-
-
-
 **Importing**
 
-    import {TimePickerComponent} from "angular2-timepicker/timepicker-component";
-
+    import { TimePickerModule } from "ng2-simple-timepicker/timepicker";
 
 **Options and Events:**
-
 
 Usage same as mentioned in https://github.com/jonthornton/jquery-timepicker.
 
@@ -53,12 +40,4 @@ Changing the options handles the destroy and initialize of time picker component
 
 **Help**
 
-Submit a issue in [github](https://github.com/bharatraj88/angular2-timepicker/issues/new) with details of your problems. You can also use [Plunker](https://plnkr.co/). Donot forget to mention the **AngularJS2 version** which you are using.
-
-
-
-
-
-
-
-
+Submit a issue in [github](https://github.com/daffodilistic/ng2-simple-timepicker/issues/new) with details of your problems.

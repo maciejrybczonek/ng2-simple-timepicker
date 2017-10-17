@@ -1,11 +1,9 @@
 import { ControlValueAccessor,NgModel } from '@angular/forms';
 import { Directive,ElementRef,Renderer,
-          EventEmitter,Output,Input,OnChanges } from '@angular/core';
+          EventEmitter,Output,Input,OnChanges,ViewChild } from '@angular/core';
 
-
-var $ = require("jquery");
-
-
+declare var $: any;
+          
 /**
  * Acts as a private class
  */
@@ -122,6 +120,9 @@ export class TimePicker implements ControlValueAccessor,OnChanges {
   showTimepicker:EventEmitter<Object> = new EventEmitter();
   @Output()
   timeRangeError:EventEmitter<Object> = new EventEmitter();
+  
+  constructor(private _renderer:Renderer, private _elementRef:ElementRef,private _ngModel:NgModel) {
+  }
 
   ngOnChanges():any {
     var self = this;
@@ -155,9 +156,6 @@ export class TimePicker implements ControlValueAccessor,OnChanges {
 
   onTouched = () => {
   };
-
-  constructor(private _renderer:Renderer, private _elementRef:ElementRef,private _ngModel:NgModel) {
-  }
 
   private onUpdate(event:any) {
     let value = this._elementRef.nativeElement.value;
