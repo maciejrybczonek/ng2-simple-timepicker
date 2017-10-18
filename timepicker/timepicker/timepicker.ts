@@ -1,6 +1,7 @@
 import { ControlValueAccessor,NgModel } from '@angular/forms';
 import { Directive,ElementRef,Renderer,
           EventEmitter,Output,Input,OnChanges,ViewChild } from '@angular/core';
+import "reflect-metadata";
 
 declare var $: any;
 
