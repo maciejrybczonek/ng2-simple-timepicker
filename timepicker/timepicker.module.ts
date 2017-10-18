@@ -9,4 +9,4 @@ import { TimePicker } from './timepicker/timepicker';
     declarations: [TimePicker],
     exports: [TimePicker]
 })
-export class TimepickerModule { }
+export class TimePickerModule { }
