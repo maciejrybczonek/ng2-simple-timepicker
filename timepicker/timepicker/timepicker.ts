@@ -118,7 +118,7 @@ export class TimePicker implements ControlValueAccessor,OnChanges {
   showTimepicker:EventEmitter<Object> = new EventEmitter();
   @Output()
   timeRangeError:EventEmitter<Object> = new EventEmitter();
-  
+
   constructor(private _renderer:Renderer, private _elementRef:ElementRef,private _ngModel:NgModel) {
   }
 
@@ -126,6 +126,7 @@ export class TimePicker implements ControlValueAccessor,OnChanges {
     var self = this;
     let el = $(this._elementRef.nativeElement);
     // Unbinding if timepicker present
+    el.off();
     el.timepicker('remove');
     el.timepicker(this.options);
     el.on('changeTime', function (event:Object) {
